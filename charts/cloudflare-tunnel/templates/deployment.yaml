@@ -45,7 +45,6 @@ spec:
             # cloudflared will actually do. This file is created by a ConfigMap.
             - --config
             - /etc/cloudflared/config/config.yaml
-            - --protocol {{ .Values.cloudflare.protocol }}
             - run
           livenessProbe:
             httpGet:

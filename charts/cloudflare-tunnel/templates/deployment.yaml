@@ -46,6 +46,7 @@ spec:
             - --config
             - /etc/cloudflared/config/config.yaml
             - run
+            - --protocol {{ .Values.cloudflare.protocol }}
           livenessProbe:
             httpGet:
               # Cloudflared has a /ready endpoint which returns 200 if and only if
